@@ -1,0 +1,50 @@
+body{
+    background-color: black;
+    margin: 0;
+      height: 100vh; /* 100% высоты видимой части экрана */
+      display: flex;
+      justify-content: center; /* Центрирование по горизонтали */
+      align-items: center;     /* Центрирование по вертикали */
+ 
+      font-family: sans-serif;
+      padding: 20px; /* Защитный отступ, чтобы кнопка не липла к краям экрана */
+      box-sizing: border-box;
+}
+.pre{
+    border-radius: 50px;
+    align-self: center;
+    background-color: rgb(88, 0, 146);
+    color: white;
+
+
+
+          /* Размеры и адаптивность */
+      width: 100%;          /* Стремится занять всю ширину... */
+      max-width: 900px;   
+      height: 200px;  /* ...но не станет шире 300px (подберите под себя) */
+      box-sizing: border-box;
+font-size: 30px;
+      /* Внешний вид */
+      padding: 15px 30px;
+        
+}
+
+        #videoContainer {
+    display: none; 
+    position: fixed;   /* Фиксируем поверх всего сайта */
+    top: 0;
+    left: 0;
+    width: 100vw;      /* 100% ширины экрана */
+    height: 100vh;     /* 100% высоты экрана */
+    background-color: black; /* Черный фон вокруг видео */
+    z-index: 9999;     /* Отображается поверх любых других элементов */
+}
+
+/* Растягиваем само видео внутри контейнера */
+#videoContainer video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Видео впишется в экран без искажений и обрезки */
+    object-fit: cover; /* Видео полностью заполнит экран смартфона */
+
+}
