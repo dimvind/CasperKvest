@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заголовок страницы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button class="pre" id="actionBtn" onclick="startTimer()">Начать приключение!</button>
+
+  <div id="videoContainer">
+      <!-- ДОБАВИЛ ID id="myVideo" и убрал autoplay (он теперь не нужен) -->
+      <video id="myVideo" width="640" height="360" controls>
+          <source src="Телекомпания ВИD (Заставка Скример).mp4" type="video/mp4">
+          Ваш браузер не поддерживает тег видео.
+      </video>
+  </div> <!-- ЗАКРЫЛ ТЕГ DIV -->
+
+  <script>
+      function startTimer() {
+          // 1. Скрываем кнопку
+          document.getElementById('actionBtn').style.display = 'none';
+          
+          // 2. Через 3 секунды показываем и запускаем видео
+          setTimeout(function() {
+              var container = document.getElementById('videoContainer');
+              var video = document.getElementById('myVideo');
+              
+              container.style.display = 'block'; // Показываем контейнер
+              video.play();                      // Запускаем воспроизведение
+          }, 3000);
+      }
+  </script>
+
+</body>
+</html>
